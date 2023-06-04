@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pedidos Pendientes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menusinauto"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let viajes of listaviaje" [routerLink]="['/detalle']" [queryParams]="{
+    conductor: this.viajes.conductor,
+    destino: this.viajes.destino,
+    costo: this.viajes.monto
+      }">
+
+    <ion-label>
+      <h5>Conductor: {{viajes.conductor}}</h5>
+      <ion-note>Destino: {{viajes.destino}}</ion-note>
+      <p>Cantidad de Bencina: ${{viajes.monto}} Litros</p>
+    </ion-label>
+  </ion-item>
+</ion-content>

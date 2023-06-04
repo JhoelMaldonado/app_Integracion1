@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <img width=100px src="https://www.redcampussustentable.cl/wp-content/uploads/2022/07/DUOC-PNG.png" alt="">
+  </ion-toolbar>
+
+  <ion-toolbar class="ion-text-center">
+
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div id='map'></div>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="mapa">
+        <ion-tab-button tab="schedule" [routerLink]="['/#']">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>Mapa</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/regviaje']"[queryParams]="{nombre: this.nombre, apellido:this.apellido,sede:this.sede}">
+          <ion-icon name="create-outline"></ion-icon>
+          <ion-label>Registrar viaje</ion-label>
+        </ion-tab-button>
+
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

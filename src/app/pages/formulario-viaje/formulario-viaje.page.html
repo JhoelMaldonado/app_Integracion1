@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tu viaje</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario" (ngSubmit)="ingresarConductor()">
+    <ion-card>
+      <ion-item>
+        <ion-label position="stacked">Conductor</ion-label>
+        <ion-input type="text" [value]="nombre +' '+ apellido" [disabled]="true"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label position="stacked">Origen</ion-label>
+        <ion-input type="text" [value]="Origen" [disabled]="true"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label position="stacked">Destino</ion-label>
+        <ion-input formControlName="destino" type="text"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label position="stacked">Costo por persona</ion-label>
+        <ion-input formControlName="monto" type="number"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label position="stacked">Capacidad disponible</ion-label>
+        <ion-input formControlName="capacidad" type="number"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-button expand="full" type="submit">Registrar viaje</ion-button>
+  </form>
+
+</ion-content>
