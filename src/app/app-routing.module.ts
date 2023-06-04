@@ -15,11 +15,6 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
-
-  {
-    path: 'recuperarCon',
-    loadChildren: () => import('./pages/recuperar-password/recuperar-password.module').then( m => m.RecuperarPasswordPageModule)
-  },
   {
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
@@ -47,10 +42,6 @@ const routes: Routes = [
   {
     path: 'lista',
     loadChildren: () => import('./pages/lista-viajes/lista-viajes.module').then( m => m.ListaViajesPageModule)
-  },
-  {
-    path: 'qr-apk',
-    loadChildren: () => import('./pages/qr-apk/qr-apk.module').then( m => m.QrApkPageModule)
   },
   {
     path: 'detalle',
